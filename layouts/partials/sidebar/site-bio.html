@@ -3,7 +3,7 @@
   {{ if ($.Param "enableBioImage" | default true) }}
   <hr class="hr-slash bio-hr"/>
   <div class="bio__photo-wrapper">
-    {{ $url := partial "partials/whoami/img-url" (dict
+    {{ $url := partial "whoami/img-url" (dict
       "urlSource" ($.Param "bioImageUrl")
       "size" 250
     )}}
