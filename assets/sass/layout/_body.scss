@@ -3,12 +3,28 @@
   
   @include flexbox();
   
-  @include themify($themes) {
+}
+
+
+#root {
+  @each $theme, $map in $themes {
+    &.theme__#{$theme} {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
       color: themed('body-color');
       background-color: themed('backdrop-background-color');
       hr {
         border-color: themed('hr-color');
       }
+    }
   }
 }
 
