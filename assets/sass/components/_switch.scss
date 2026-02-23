@@ -25,9 +25,7 @@
   bottom: 0;
 
   @include transition(all, 0.2s, ease);
-  @include themify($themes) {
-    background-color: themed('switch-background-color');
-  }
+    background-color: var(--switch-background-color);
 }
 
 .slider:before {
@@ -39,21 +37,15 @@
   bottom: 1.72px;
 
   @include transition(all, 0.2s, ease);
-  @include themify($themes) {
-    background-color: themed('switch-button-color');
-  }
+    background-color: var(--switch-button-color);
 }
 
 input:checked + .slider {
-  @include themify($themes) {
-    background-color: themed('switch-active-color');
-  }
+    background-color: var(--switch-active-color);
 }
 
 input:focus + .slider {
-  @include themify($themes) {
-    box-shadow: 0 0 1px themed('switch-active-color');
-  }  
+    box-shadow: 0 0 1px var(--switch-active-color);
 }
 
 input:checked + .slider:before {

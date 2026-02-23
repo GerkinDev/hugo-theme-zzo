@@ -14,10 +14,8 @@
     }
     
     @include truncate(100px);
-    @include themify($themes) {
-      color: themed('archive-meta-color');
-      background-color: themed('archive-type-background-color');
-    }
+      color: var(--archive-meta-color);
+      background-color: var(--archive-type-background-color);
 
     &[data-dir="rtl"] {
       margin-left: 1rem;
@@ -42,9 +40,7 @@
   &__icon {
     margin: auto 0.25rem;
     
-    @include themify($themes) {
-      color: themed('social-icon-color');
-    }
+      color: var(--social-icon-color);
   }
 
   &__title {
@@ -69,15 +65,13 @@
           width: 0.25rem;
           height: 30px;
           
-          @include themify($themes) {
-            background-color: themed('archive-hover-line-color');
+            background-color: var(--archive-hover-line-color);
             
             @media only screen and (max-width:768px) {
               top: 13px;
               left: 0;
               height: 24px;
             }
-          }
 
           @media only screen and (max-width: 769px) {
             height: 24px;

@@ -44,11 +44,9 @@
         a {
             font-weight: bold;
             color: rgba(134, 74, 22, 0.995);
-            @include themify($themes) {
                 @include on-event {
-                    color: themed('link-hover');
+                    color: var(--link-hover);
                 }
-            }
         }
 
         > table {
@@ -100,11 +98,9 @@
         a {
             font-weight: bold;
             color: rgba(116, 40, 40, 0.995);
-            @include themify($themes) {
                 @include on-event {
-                    color: themed('link-hover');
+                    color: var(--link-hover);
                 }
-            }
         }
 
         > table {
@@ -156,11 +152,9 @@
         a {
             font-weight: bold;
             color: rgba(31, 87, 125, 0.995);
-            @include themify($themes) {
                 @include on-event {
-                    color: themed('link-hover');
+                    color: var(--link-hover);
                 }
-            }
         }
 
         > table {
@@ -212,11 +206,9 @@
         a {
             font-weight: bold;
             color: rgba(56, 109, 47, 0.995);
-            @include themify($themes) {
                 @include on-event {
-                    color: themed('link-hover');
+                    color: var(--link-hover);
                 }
-            }
         }
 
         > table {

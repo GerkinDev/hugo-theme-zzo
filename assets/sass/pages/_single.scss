@@ -13,9 +13,7 @@
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     
-    @include themify($themes) {
-      color: themed("single-header-title-color");
-    }
+      color: var(--single-header-title-color);
 
     &[data-ani="true"] {
       @include animation('slide-in-down .2s .3s 1 ease-in both');
@@ -26,9 +24,7 @@
     margin-bottom: 1.75rem;
     font-family: $title-font;
     
-    @include themify($themes) {
-      color: themed("toc-title-color");
-    }
+      color: var(--toc-title-color);
 
     &[data-ani="true"] {
       @include animation('slide-in-down .2s .3s 1 ease-in both');
@@ -42,9 +38,7 @@
     margin-bottom: 0.25rem;
     opacity: 0.7;
 
-    @include themify($themes) {
-      color: themed("single-header-title-color");
-    }
+      color: var(--single-header-title-color);
   }
 
   &__meta {
@@ -55,9 +49,7 @@
     @include align-items(center);
     @include flex-wrap(wrap);
     @include flex-grow(1);
-    @include themify($themes) {
-      color: themed('meta-color');
-    }
+      color: var(--meta-color);
     @media only screen and (max-width: 769px) {
       @include flexbox();
       @include flex-direction(column);
@@ -119,18 +111,14 @@
       font-weight: 900;
       text-rendering: optimizeLegibility; 
 
-      @include themify($themes) {
-        color: themed("single-contents-title-color");
-      }
+        color: var(--single-contents-title-color);
     }
 
     h3,
     h4,
     h5,
     h6 {
-      @include themify($themes) {
-        color: themed("single-contents-subtitle-color");
-      }
+        color: var(--single-contents-subtitle-color);
     }
 
     h1 {
@@ -171,10 +159,8 @@
       font-size: 13.8px;
       direction: ltr;
       
-      @include themify($themes) {
-        @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-        @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-      }
+        @include webkit-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
+        @include moz-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
     }
 
     pre:not(.chroma) {
@@ -320,9 +306,7 @@
         margin: 0 1.5rem 1.75rem 1.75rem;
         padding: 0 1.42188rem 0 0;
 
-        @include themify($themes) {
-          border-right: 0.32813rem solid themed("single-blockquote-border-color");
-        }
+          border-right: 0.32813rem solid var(--single-blockquote-border-color);
       }
     }
 
@@ -335,9 +319,7 @@
         margin: 0 1.75rem 1.75rem 1.5rem;
         padding: 0 0 0 1.42188rem;
 
-        @include themify($themes) {
-          border-left: 0.32813rem solid themed("single-blockquote-border-color");
-        }
+          border-left: 0.32813rem solid var(--single-blockquote-border-color);
       }
     }
 
@@ -364,9 +346,7 @@
       padding: 0;
       border: none;
       height: 1px;
-      @include themify($themes) {
-        background: themed("single-hr-background-color");
-      }
+        background: var(--single-hr-background-color);
     }
 
     dl dt::after {
@@ -601,10 +581,8 @@ pre:not(.chroma) {
 
   table.lntable {
     overflow-x: auto;
-    @include themify($themes) {
-      @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-      @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-    }
+      @include webkit-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
+      @include moz-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
   }
 }
 

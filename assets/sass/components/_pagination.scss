@@ -6,19 +6,15 @@
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
-  @include themify($themes) {
-    background-color: themed('pagination-background-color');
-  }
+    background-color: var(--pagination-background-color);
 
   li {
     border-radius: 0.25rem;
     &.disabled {
       a {
         @include on-event {
-          @include themify($themes) {
-            color: themed('pagination-number-color');
+            color: var(--pagination-number-color);
             text-decoration: none;
-          }      
         }
       }
     }
@@ -26,9 +22,7 @@
     &.active {
       font-weight: bold;
       a {
-        @include themify($themes) {
-          color: themed('link-hover');
-        }      
+          color: var(--link-hover);
       }
     }
   }
@@ -36,18 +30,14 @@
   a {
     font-size: 1.25rem;
     padding: 0.5rem 0.75rem;    
-    @include themify($themes) {
-      color: themed('pagination-number-color');
+      color: var(--pagination-number-color);
       @include on-event {
-        color: themed('link-hover');
+        color: var(--link-hover);
       }
-    }
   }
 
   .active {
-    @include themify($themes) {
-      background-color: themed('pagination-background-color');
-    }
+      background-color: var(--pagination-background-color);
   }
 }
 
@@ -77,10 +67,8 @@
 
     @include on-event {
       .pagination-single__icon {
-        @include themify($themes) {
-          color: themed('gtt-hover-color');
-          background-color: themed('gtt-hover-background-color');
-        }
+          color: var(--gtt-hover-color);
+          background-color: var(--gtt-hover-background-color);
       }
     }
   }
@@ -106,9 +94,7 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
-    @include themify($themes) {
-      color: themed('gtt-color');
-      background-color: themed('gtt-background-color');
-    }
+      color: var(--gtt-color);
+      background-color: var(--gtt-background-color);
   }
 }

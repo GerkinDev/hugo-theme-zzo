@@ -11,19 +11,15 @@
       font-weight: 700;
       word-break: break-word;
 
-      @include themify($themes) {
-          color: themed('title-color');
+          color: var(--title-color);
           @include on-event {
-            color: themed('link-hover');
+            color: var(--link-hover);
           }
-      }
     }
   }
 
   .subtitle {
-    @include themify($themes) {
-      color: themed('meta-color');
-    }
+      color: var(--meta-color);
   }
 
   &__content {
@@ -67,9 +63,7 @@
 
   hr {
     margin-top: 1.5rem;
-    @include themify($themes) {
-        border-top: 1px solid themed('hr-color');
-    }
+        border-top: 1px solid var(--hr-color);
   }
   &:not(:last-child) {
     hr {
@@ -100,19 +94,15 @@
       font-weight: 700;
       word-break:break-word;
 
-      @include themify($themes) {
-          color: themed('title-color');
+          color: var(--title-color);
           @include on-event {
-            color: themed('link-hover');
+            color: var(--link-hover);
           }
-      }
     }
   }
 
   .subtitle {
-    @include themify($themes) {
-      color: themed('meta-color');
-    }
+      color: var(--meta-color);
   }
 
   &__flex-box {
@@ -189,9 +179,7 @@
   }
 
   hr {
-    @include themify($themes) {
-        border-top: 1px solid themed('hr-color');
-    }
+        border-top: 1px solid var(--hr-color);
   }
 
   &:not(:last-child) {
@@ -216,19 +204,15 @@
 
   .title {
     a {
-      @include themify($themes) {
-        color: themed('title-color');
+        color: var(--title-color);
         @include on-event {
-          color: themed('link-hover');
+          color: var(--link-hover);
         }
-      }
     }
   }
 
   .subtitle {
-    @include themify($themes) {
-      color: themed('meta-color');
-    }
+      color: var(--meta-color);
   }
   
   &__flexbox {
@@ -252,10 +236,8 @@
     text-transform: capitalize;
     cursor: pointer;
 
-    @include themify($themes) {
-      color: themed('body-color');
-      background-color: themed('taxo-tags-background-color');
-    }
+      color: var(--body-color);
+      background-color: var(--taxo-tags-background-color);
 
     &--wrapper {
       margin-top: 0.5rem;
@@ -266,8 +248,6 @@
   }
 
   hr {
-    @include themify($themes) {
-        border-top: 1px solid themed('hr-color');
-    }
+        border-top: 1px solid var(--hr-color);
   }
 }

@@ -4,10 +4,9 @@
     border: 1px solid transparent;
     border-radius: 0.125rem;
 
-    @include themify($themes) {
         &-info {
             background-color: rgba(215, 238, 249, 0.4);
-            color: themed('dropdown-item-color');
+            color: var(--dropdown-item-color);
 
             &[data-dir="rtl"] {
                 border-right: 5px solid #bbdefb;
@@ -20,7 +19,7 @@
 
         &-success {
             background-color: rgba(217, 239, 214, 0.4);
-            color: themed('dropdown-item-color');
+            color: var(--dropdown-item-color);
 
             &[data-dir="rtl"] {
                 border-right: 5px solid #c8e6c9;
@@ -33,7 +32,7 @@
 
         &-warning {
             background-color: rgba(255, 249, 196, 0.4);
-            color: themed('dropdown-item-color');
+            color: var(--dropdown-item-color);
 
             &[data-dir="rtl"] {
                 border-right: 5px solid #ffeb3b;
@@ -46,7 +45,7 @@
 
         &-danger {
             background-color: rgba(245, 221, 221, 0.4);
-            color: themed('dropdown-item-color');
+            color: var(--dropdown-item-color);
 
             &[data-dir="rtl"] {
                 border-right: 5px solid #ffcdd2;
@@ -56,5 +55,4 @@
                 border-left: 5px solid #ffcdd2;
             }
         }
-    }
 }

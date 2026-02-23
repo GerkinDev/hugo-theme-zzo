@@ -26,9 +26,7 @@
         top: 0;
         width: 0.25rem;
         height: 100%;
-        @include themify($themes) {
-          background-color: themed('toc-vertical-line');
-        }
+          background-color: var(--toc-vertical-line);
       }
 
       @media only screen and (max-width: 769px) {
@@ -46,9 +44,7 @@
         top: 0;
         width: 0.25rem;
         height: 100%;
-        @include themify($themes) {
-          background-color: themed('toc-vertical-line');
-        }
+          background-color: var(--toc-vertical-line);
       }
       @media only screen and (max-width: 769px) {
         &::before {
@@ -101,10 +97,8 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
-    @include themify($themes) {
-      color: themed('archive-key-color');
-      background-color: themed('archive-key-background-color');
-    }
+      color: var(--archive-key-color);
+      background-color: var(--archive-key-background-color);
 
     &[data-ani="true"] {
       @include animation('slide-in-down .4s .2s 1 ease both');
@@ -142,14 +136,12 @@
     text-align: center;
 
     @include truncate(50px);
-    @include themify($themes) {
-      color: themed('archive-type-color');
-      background-color: themed('archive-type-background-color');
+      color: var(--archive-type-color);
+      background-color: var(--archive-type-background-color);
 
       @media only screen and (max-width: 769px) {
-        border-right: 2px solid themed('toc-vertical-line');
+        border-right: 2px solid var(--toc-vertical-line);
       }
-    }
   }
 
   &__date {
@@ -163,14 +155,12 @@
     text-align: center;        
 
     @include truncate(50px);
-    @include themify($themes) {
-      color: themed('archive-meta-color');
-      background-color: themed('archive-type-background-color');
+      color: var(--archive-meta-color);
+      background-color: var(--archive-type-background-color);
 
       @media only screen and (max-width: 769px) {
-        border-left: 2px solid themed('toc-vertical-line');
+        border-left: 2px solid var(--toc-vertical-line);
       }
-    }
   }
 
   &__title {
@@ -196,14 +186,12 @@
           width: 0.25rem;
           height: 30px;
           
-          @include themify($themes) {
-            background-color: themed('archive-hover-line-color');
+            background-color: var(--archive-hover-line-color);
             
             @media only screen and (max-width:768px) {
               top: 13px;
               height: 24px;
             }
-          }
 
           @media only screen and (max-width: 769px) {
             height: 24px;
@@ -221,14 +209,12 @@
           width: 0.25rem;
           height: 30px;
           
-          @include themify($themes) {
-            background-color: themed('archive-hover-line-color');
+            background-color: var(--archive-hover-line-color);
             
             @media only screen and (max-width:768px) {
               top: 13px;
               height: 24px;
             }
-          }
 
           @media only screen and (max-width: 769px) {
             height: 24px;
@@ -245,9 +231,7 @@
     font-weight: bold;
     font-family: $title-font;
 
-    @include themify($themes) {
-      color: themed('terms-title-color');
-    }
+      color: var(--terms-title-color);
     @media only screen and (max-width:600px) {
       margin-bottom: 1rem;
     }

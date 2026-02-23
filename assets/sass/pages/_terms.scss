@@ -8,13 +8,11 @@
     margin: 2rem 0;
     font-family: $title-font;
     
-    @include themify($themes) {
-      color: themed('terms-title-color');
-      text-shadow: 1.2px 1.2px 0 themed('terms-title-color'),
-        2.4px 2.4px 0 lighten(themed('terms-title-shadow-color'), 4%),
-        3.6px 3.6px 0 lighten(themed('terms-title-shadow-color'), 8%),
-        4.8px 4.8px 0 lighten(themed('terms-title-shadow-color'), 12%);
-    }    
+      color: var(--terms-title-color);
+      text-shadow: 1.2px 1.2px 0 var('terms-title-color'),
+        2.4px 2.4px 0 unquote("hsl(from var(--terms-title-shadow-color) h s calc(l + 4))"),
+        3.6px 3.6px 0 unquote("hsl(from var(--terms-title-shadow-color) h s calc(l + 8))"),
+        4.8px 4.8px 0 unquote("hsl(from var(--terms-title-shadow-color) h s calc(l + 12))");
   }
 
   &__content {
@@ -54,27 +52,19 @@
   }
 
   &__tags {
-    @include themify($themes) {
-      color: themed('terms-tags-color');
-    }
+      color: var(--terms-tags-color);
   }
 
   &__categories {
-    @include themify($themes) {
-      color: themed('terms-categories-color');
-    }    
+      color: var(--terms-categories-color);
   }
 
   &__series {
-    @include themify($themes) {
-      color: themed('terms-series-color');
-    }
+      color: var(--terms-series-color);
   }
 
   &__len {
-    @include themify($themes) {
-      color: themed('terms-len-color');
-    }
+      color: var(--terms-len-color);
   }
 
   .is-small {

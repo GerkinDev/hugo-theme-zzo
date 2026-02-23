@@ -26,10 +26,8 @@
   @include transition(all, 0.2s, ease);  
   @include flexbox();
   @include justify-content(space-between);
-  @include themify($themes) {
-    border-bottom: 1px solid themed('navbar-border-bottom-color');
-    background-color: themed('navbar-background-color');
-  }
+    border-bottom: 1px solid var(--navbar-border-bottom-color);
+    background-color: var(--navbar-background-color);
 
   &--hide {
     top: -$grid_navbar_height;
@@ -45,13 +43,11 @@
       display: block;
     }
 
-    @include themify($themes) {
-      background-color: themed('navbar-background-color') !important;
+      background-color: var(--navbar-background-color) !important;
 
       @include on-event {
-        color: themed('navbar-title-hover-color');
+        color: var(--navbar-title-hover-color);
       }
-    }
 
     &[data-ani="true"] {
       @media only screen and (min-width: 769px) {
@@ -90,15 +86,11 @@
       @include flexbox();
       @include align-items(center);
       @include justify-content(flex-end);
-      @include themify($themes) {
-        background: themed('navbar-background-color');
-        border-bottom: 1px solid themed('navbar-border-bottom-color');
-      }
+        background: var(--navbar-background-color);
+        border-bottom: 1px solid var(--navbar-border-bottom-color);
 
       span {
-        @include themify($themes) {
-          background-color: themed('burger-menu-color');
-        }
+          background-color: var(--burger-menu-color);
         
         border-radius: 1rem;
         display: block;
@@ -124,9 +116,7 @@
           
       @include on-event {
         span {
-          @include themify($themes) {
-            background-color: themed('navbar-title-hover-color');
-          }
+            background-color: var(--navbar-title-hover-color);
         }        
       }
 
@@ -181,13 +171,11 @@
     @include align-items(center);        
     
     &-link {
-      @include themify($themes) {
-        color: themed("navbar-title-color");
+        color: var(--navbar-title-color);
         @include on-event {
             text-decoration: none;
-            color: themed("navbar-title-color");
+            color: var(--navbar-title-color);
         }
-      }
     }
   }
 
@@ -214,24 +202,22 @@
       @include align-items(center);
       @include justify-content(center);
       @include no-select;
-      @include themify($themes) {
-        color: themed('navbar-title-color');
+        color: var(--navbar-title-color);
         border-top: 1px solid transparent;
-        border-bottom: 1px solid themed('navbar-border-bottom-color');
-        background-color: themed('navbar-background-color');
+        border-bottom: 1px solid var(--navbar-border-bottom-color);
+        background-color: var(--navbar-background-color);
         @include on-event {
-          color: themed('navbar-title-hover-color');
-          // background-color: themed('navbar-menu-hover-background-color');
+          color: var(--navbar-title-hover-color);
+          // background-color: var(--navbar-menu-hover-background-color);
           text-decoration: none;
-          border-bottom: 1px solid themed('navbar-border-bottom-color');
+          border-bottom: 1px solid var(--navbar-border-bottom-color);
         }
         @media only screen and (max-width: 769px) {
           border-bottom: none;
         }
         &.active {
-          color: themed('navbar-title-active-color') !important;
+          color: var(--navbar-title-active-color) !important;
         }
-      }
 
       @media only screen and (max-width: 769px) {
         @include justify-content(flex-start);
@@ -251,11 +237,9 @@
     //   @include flexbox();
     //   @include flex-direction(column);
     //   @include align-items(flex-start);
-    //   @include themify($themes) {        
-    //     border-top: 1px solid themed('navbar-border-bottom-color');
-    //     background-color: themed('navbar-mobile-background-color');
-    //     border-bottom: 1px solid themed('navbar-border-bottom-color');
-    //   }
+    //     border-top: 1px solid var(--navbar-border-bottom-color);
+    //     background-color: var(--navbar-mobile-background-color);
+    //     border-bottom: 1px solid var(--navbar-border-bottom-color);
     // }
   }
 
@@ -276,19 +260,15 @@
       border-bottom-right-radius: 0.15rem;
 
       @include box-shadow(0, 1px, 3px, 0, rgba(0, 0, 0, 0.4));
-      @include themify($themes) {
-        border-top: 4px solid themed("dropdown-border-top-color");
-        background-color: themed("dropdown-content-background-color");
-      }
+        border-top: 4px solid var(--dropdown-border-top-color);
+        background-color: var(--dropdown-content-background-color);
 
       @media only screen and (max-width: 769px) {
         position: relative;
         display: block;
         box-shadow: none;
-        @include themify($themes) {
           border-top: none;
-          background-color: themed("navbar-mobile-background-color");
-        }
+          background-color: var(--navbar-mobile-background-color);
       }
     }
 
@@ -304,12 +284,11 @@
       font-weight: 700;
 
       @include truncate(150px);
-      @include themify($themes) {
-        color: themed("dropdown-item-color");
-        background-color: themed("navbar-background-color");
+        color: var(--dropdown-item-color);
+        background-color: var(--navbar-background-color);
         @include on-event {
-          color: themed("navbar-dropdown-item-hover-color");
-          background-color: themed("navbar-menu-hover-background-color");
+          color: var(--navbar-dropdown-item-hover-color);
+          background-color: var(--navbar-menu-hover-background-color);
           text-decoration: none;          
 
           &:last-child {
@@ -317,7 +296,6 @@
             border-bottom-right-radius: 0.15rem;
           }
         }
-      }
 
       @media only screen and (max-width: 769px) {
         padding: 0 2.5rem;
@@ -352,12 +330,10 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);    
-    @include themify($themes) {
-      color: themed('burger-menu-color');  
+      color: var(--burger-menu-color);  
       @include on-event {
-        color: themed('navbar-title-hover-color');
+        color: var(--navbar-title-hover-color);
       }
-    }
 
     &-trigger {
       padding: 0.5rem;
@@ -367,12 +343,10 @@
       width: $grid_navbar_height;
       height: $grid_navbar_height - 2px;
 
-      @include themify($themes) {
-        color: themed('burger-menu-color');
+        color: var(--burger-menu-color);
         @include on-event {
-          color: themed('navbar-title-hover-color');
+          color: var(--navbar-title-hover-color);
         }
-      }
     }
 
     @media only screen and (max-width: 769px) {
@@ -397,15 +371,11 @@
       }
 
       @include box-shadow(0, 1px, 3px, 0, rgba(0, 0, 0, 0.4));
-      @include themify($themes) {
-        border-top: 4px solid themed("dropdown-border-top-color");
-        background-color: themed("dropdown-content-background-color");
-      }
+        border-top: 4px solid var(--dropdown-border-top-color);
+        background-color: var(--dropdown-content-background-color);
 
       .is-active {
-        @include themify($themes) {
-          background-color: themed("dropdown-item-active-background-color");
-        }
+          background-color: var(--dropdown-item-active-background-color);
       }
     }
 
@@ -417,11 +387,10 @@
       font-size: 1rem;
 
       @include no-select;
-      @include themify($themes) {
-        color: themed("dropdown-item-color");
+        color: var(--dropdown-item-color);
         @include on-event {
-          color: themed("dropdown-item-hover-color");
-          background-color: themed("dropdown-item-hover-background-color");
+          color: var(--dropdown-item-hover-color);
+          background-color: var(--dropdown-item-hover-background-color);
           text-decoration: none;
 
           &:last-child {
@@ -429,7 +398,6 @@
             border-bottom-right-radius: 0.25rem;
           }
         }
-      }
     }
   }
 
@@ -478,9 +446,7 @@
 
     &--term {
       &[data-index="0"] {
-        @include themify($themes) {
-          border-top: 1px solid themed('search-border-outline-color');
-        }
+          border-top: 1px solid var(--search-border-outline-color);
       }
     }
 
@@ -505,17 +471,15 @@
         margin: auto 0.25rem;
       }
 
-      @include themify($themes) {
-        color: themed('body-color');
+        color: var(--body-color);
         &.active {
           font-weight: bold;
-          color: themed('navbar-title-active-color');
+          color: var(--navbar-title-active-color);
         }
         
         @include on-event {
-          background-color: themed('navbar-menu-hover-background-color');
+          background-color: var(--navbar-menu-hover-background-color);
         }
-      }
     }
 
     &--subitem {
@@ -537,15 +501,13 @@
     overflow: hidden;
 
     @include transition(all, 0.15s, ease-out);
-    @include themify($themes) {
-      background-color: themed('navbar-background-color');
+      background-color: var(--navbar-background-color);
       
       &[data-open="true"] {
-        border-bottom: 2px solid themed('navbar-border-bottom-color');
+        border-bottom: 2px solid var(--navbar-border-bottom-color);
       }
       &[data-open="false"] {
         border-bottom: none;
       }
-    }
   }
 }

@@ -31,18 +31,17 @@
       @include flex-direction(column);
     }
 
-    @include themify($themes) {
       &--sectiontitle {
         font-family: $title-font;
         padding: 0 1rem;
         font-size: 1.25rem;
-        color: themed('gtt-color');
+        color: var(--gtt-color);
       }
 
       &--title {
         font-family: $title-font;
         font-size: 1.125rem;
-        color: themed('meta-color');
+        color: var(--meta-color);
 
         @include flexbox();
         @include align-items(center);
@@ -128,6 +127,5 @@
           width: 100%;
         }
       }
-    }
   }
 }

@@ -32,13 +32,11 @@
     }
     
     @include transition(all, 0.2s, ease-in);
-    @include themify($themes) {
-      color: themed('navbar-title-color');
+      color: var(--navbar-title-color);
       border-top: 1px solid transparent;
       &.active {
-        border-top: 1px solid themed('content-pre-header-background-color');
+        border-top: 1px solid var(--content-pre-header-background-color);
       }
-    }
 
     @include themify($codeblock) {
       background-color: themed('content-pre-header-background-color');

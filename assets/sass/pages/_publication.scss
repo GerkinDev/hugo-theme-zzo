@@ -37,12 +37,10 @@
     }
 
     a {
-      @include themify($themes) {
-        color: themed('title-color');
+        color: var(--title-color);
         @include on-event {
-          color: themed('link-hover');
+          color: var(--link-hover);
         }
-      }
     }
   }
 
@@ -50,9 +48,7 @@
     margin: 0 0.25rem;
     display: inline-block;
 
-    @include themify($themes) {
-      color: themed('meta-color');
-    }
+      color: var(--meta-color);
   }
 
   &__summary {
@@ -65,13 +61,11 @@
     padding: 0 0.4rem;
     border-radius: 0.2rem;
     
-    @include themify($themes) {
-      color: themed('body-color') !important;
-      background-color: themed('donation-background-color');
+      color: var(--body-color) !important;
+      background-color: var(--donation-background-color);
       @include on-event {
-        background-color: darken(themed('donation-background-color'), 5%);
+        background-color: unquote("hsl(from var(--donation-background-color) h s calc(l - 5))");
       }
-    }
   }
 
   &__metas {
@@ -92,12 +86,10 @@
 
   &__tag {
     padding: 0 0.25rem;
-    @include themify($themes) {
-      color: themed('link') !important;
+      color: var(--link) !important;
       @include on-event {
-        color: themed('link-hover') !important;
+        color: var(--link-hover) !important;
       }
-    }
   }
 
   &__box {
@@ -111,10 +103,8 @@
     @include flex-grow(1);
     @include flex-direction(column);
     @include justify-content(flex-start);
-    @include themify($themes) {
-      border: 1px solid themed('content-box-border-color');
-      background-color: themed('body-background-color');
-    }
+      border: 1px solid var(--content-box-border-color);
+      background-color: var(--body-background-color);
 
     @include on-event {
       @include box-shadow(1px, 1px, 3px, 0px, rgba(0, 0, 0, 0.25));
@@ -125,9 +115,7 @@
       font-size: 1rem;
       font-family: $title-font;
       
-      @include themify($themes) {
-        color: themed('title-color');
-      }
+        color: var(--title-color);
     }
 
     &--desc {
@@ -146,14 +134,12 @@
         margin: 0.125rem;
         z-index: z('card-outter');
         
-        @include themify($themes) {
-          color: themed('meta-color');
+          color: var(--meta-color);
           text-decoration: none;
 
           @include on-event {
-            color: themed('link-hover');
+            color: var(--link-hover);
           }
-        }
       }
 
       &[data-dir="ltr"] {

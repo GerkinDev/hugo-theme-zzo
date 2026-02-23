@@ -75,14 +75,12 @@
   &__social {
     margin-top: 0.5rem;
     a {
-      @include themify($themes) {
         text-decoration: none;
-        color: themed('social-icon-color');
+        color: var(--social-icon-color);
         &:hover {
-          color: themed('social-icon-hover-color');
+          color: var(--social-icon-hover-color);
           @include transition(color, 0.2s, ease);
         }        
-      }   
     }
   }
 

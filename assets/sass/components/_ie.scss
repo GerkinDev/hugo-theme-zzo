@@ -48,9 +48,7 @@
   }
 
   #search.input {
-    @include themify($themes) {
-      background-color: themed("search-background-color");
-    }
+      background-color: var(--search-background-color);
   }
 
   .search {

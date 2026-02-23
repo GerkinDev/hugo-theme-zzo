@@ -54,21 +54,26 @@
     @include justify-content(center);
   }
 
+  .bio__info {
+    &--icon {
+        @include flexbox();
+        @include align-items(center);
+        color: var(--social-icon-color);
+    }
+
+    a {
+      @include truncate($sidebar-width);
+    }
+  }
+
   &[data-dir="ltr"] {
     .bio__info {
       &--icon {
         margin-right: 0.25rem;
-
-        @include flexbox();
-        @include align-items(center);
-        @include themify($themes) {
-          color: themed('social-icon-color');
-        }
       }
 
       a {
         padding-right: 1rem;
-        @include truncate($sidebar-width);
       }
     }
   }
@@ -77,17 +82,10 @@
     .bio__info {
       &--icon {
         margin-left: 0.25rem !important;
-        
-        @include flexbox();
-        @include align-items(center);
-        @include themify($themes) {
-          color: themed('social-icon-color');
-        }
       }
 
       a {
         padding-left: 1rem;
-        @include truncate($sidebar-width);
       }
     }
   }
@@ -107,12 +105,10 @@
       @include flex-grow(1);
       @include align-items(center);
       @include justify-content(flex-start);
-      @include themify($themes) {
-        color: themed('social-icon-color');
+        color: var(--social-icon-color);
         @include on-event {
-          color: themed('social-icon-hover-color');
+          color: var(--social-icon-hover-color);
         }
-      }
     }
   }
 

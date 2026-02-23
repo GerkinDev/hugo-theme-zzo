@@ -1,7 +1,7 @@
 .donation {
   margin: 2.5rem 0;
   position: relative;
-  
+
   &__icons {
     @include flexbox();
     @include align-items(center);
@@ -19,7 +19,7 @@
     line-height: 18px;
     font-weight: bold;
     font-family: $title-font;
-    
+
     @include flexbox();
     @include justify-content(center);
   }
@@ -31,27 +31,23 @@
     border-radius: 0.25rem;
     margin: 0.25rem;
     text-transform: capitalize;
-    
+
     @include flexbox();
     @include align-items(center);
 
     &[data-type="donation"] {
       svg {
-        @include themify($themes) {
-          color: themed('share-color');
-          background-color: themed('donation-background-color');
-          @include box-shadow(1px, 1px, 3px, 0, themed('share-shadow-color'));
-        }
+          color: var(--share-color);
+          background-color: var(--donation-background-color);
+          @include box-shadow(1px, 1px, 3px, 0, var(--share-shadow-color));
       }
     }
 
     &[data-type="share"] {
       svg {
-        @include themify($themes) {
-          color: themed('share-color');
-          background-color: themed('share-background-color');
-          @include box-shadow(1px, 1px, 3px, 0, themed('share-shadow-color'));
-        }
+          color: var(--share-color);
+          background-color: var(--share-background-color);
+          @include box-shadow(1px, 1px, 3px, 0, var(--share-shadow-color));
       }
     }
 
@@ -59,102 +55,58 @@
       padding: 0.375rem;
       border-radius: 0.25rem;
       margin-right: 0.25rem;
-      
+      color: white;
+
       &[data-name="douban"] {
-        color: white;
-        @include on-event {
-          background-color: #007722;
-        }
+        --svg-color: #007722;
       }
       &[data-name="facebook"] {
-        color: white;
-        @include on-event {
-          background-color: #1877F2;  
-        }
+        --svg-color: #1877F2;
       }
       &[data-name="twitter"] {
-        color: white;
-        @include on-event {
-          background-color: #1DA1F2;  
-        }
+        --svg-color: #1DA1F2;
       }
       &[data-name="reddit"] {
-        color: white;
-        @include on-event {
-          background-color: #FF4500;  
-        }
+        --svg-color: #FF4500;
       }
       &[data-name="tumblr"] {
-        color: white;
-        @include on-event {
-          background-color: #36465D;  
-        }
+        --svg-color: #36465D;
       }
       &[data-name="linkedin"] {
-        color: white;
-        @include on-event {
-          background-color: #0077B5;  
-        }
+        --svg-color: #0077B5;
       }
       &[data-name="weibo"] {
-        color: white;
-        @include on-event {
-          background-color: #E6162D;  
-        }
+        --svg-color: #E6162D;
       }
       &[data-name="line"] {
-        color: white;
-        @include on-event {
-          background-color: #00C300;
-        }
+        --svg-color: #00C300;
       }
       &[data-name="telegram"] {
-        color: white;
-        @include on-event {
-          background-color: #2CA5E0;
-        }
+        --svg-color: #2CA5E0;
       }
       &[data-name="whatsapp"] {
-        color: white;
-        @include on-event {
-          background-color: #25D366;
-        }
+        --svg-color: #25D366;
       }
       &[data-name="pocket"] {
-        color: white;
-        @include on-event {
-          background-color: #EF3F56;
-        }
+        --svg-color: #EF3F56;
       }
       &[data-name="feedly"] {
-        color: white;
-        @include on-event {
-          background-color: #2BB24C;
-        }
+        --svg-color: #2BB24C;
       }
       &[data-name="hatena"] {
-        color: white;
-        @include on-event {
-          background-color: #00A4DE;
-        }
+        --svg-color: #00A4DE;
       }
       &[data-name="pinterest"] {
-        color: white;
-        @include on-event {
-          background-color: #BD081C;
-        }
+        --svg-color: #BD081C;
       }
       &[data-name="delicious"] {
-        color: white;
-        @include on-event {
-          background-color: #3399FF;
-        }
+        --svg-color: #3399FF;
       }
       &[data-name="google"] {
-        color: white;
-        @include on-event {
-          background-color: #4285F4;
-        }
+        --svg-color: #4285F4;
+      }
+      @include on-event {
+        background-color: var(--svg-color);
       }
 
       @include transition(transform, 0.15s, ease-in);
@@ -192,10 +144,8 @@
         transform: translate(-50%);
       }
 
-      @include themify($themes) {
-        border: 1px solid themed('dropdown-item-hover-background-color');
-        background-color: themed('dropdown-content-background-color');
-      }
+        border: 1px solid var(--dropdown-item-hover-background-color);
+        background-color: var(--dropdown-content-background-color);
     }
   }
 }

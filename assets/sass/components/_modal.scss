@@ -42,9 +42,7 @@
 
     @include no-select;
     @include translateX(-50%);
-    @include themify($themes) {
-      color: themed('gtt-color');
-    }
+      color: var(--gtt-color);
 
     &--text {
       text-align: center;
@@ -69,9 +67,7 @@
     background: transparent;
 
     @include no-select;
-    @include themify($themes) {
-      color: themed('gtt-color');
-    }
+      color: var(--gtt-color);
   }
 
   &__icon {
@@ -88,14 +84,12 @@
   }
 
   &__toolbar {
-    @include themify($themes) {
-      color: themed('gtt-color');
+      color: var(--gtt-color);
 
       @include on-event {
-        color: themed('gtt-hover-color');
+        color: var(--gtt-hover-color);
         background: rgba(0,0,0,0.4);
       }
-    }
     
     &--close {
       top: 0.4rem;
@@ -114,15 +108,13 @@
   }
 
   &__arrow {
-    @include themify($themes) {
-      color: themed('gtt-color');
+      color: var(--gtt-color);
       background: rgba(0,0,0,0.45);
 
       @include on-event {
-        color: themed('gtt-hover-color');
+        color: var(--gtt-hover-color);
         background: rgba(0,0,0,0.5);
       }
-    }
 
     &--left {
       left: 0.5rem;
@@ -147,12 +139,10 @@
     @media only screen and (max-width: 600px) {
       width: 100%;
     }
-    @include themify($themes) {
-      border: 4px solid themed('hr-color');
-      background-color: themed('body-background-color');
-      @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-      @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-    }
+      border: 4px solid var(--hr-color);
+      background-color: var(--body-background-color);
+      @include webkit-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
+      @include moz-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
 
     &--exist {
       width: 100%;
@@ -160,11 +150,9 @@
       font-size: 1rem;
       overflow-x: auto;
 
-      @include themify($themes) {
-        background-color: themed('body-background-color');
-        @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-        @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
-      }
+        background-color: var(--body-background-color);
+        @include webkit-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
+        @include moz-scrollbars(var(--custom-scrollbar-foreground-color), var(--custom-scrollbar-background-color));
     }
 
     &--notexist {

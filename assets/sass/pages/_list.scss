@@ -45,9 +45,7 @@
     font-family: $title-font;
 
     &--title {
-      @include themify($themes) {
-        color: themed('list-header-title-color');
-      }
+        color: var(--list-header-title-color);
     }
 
     &--desc {

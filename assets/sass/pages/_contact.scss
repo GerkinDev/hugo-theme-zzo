@@ -13,11 +13,9 @@
     border-radius: 0.125rem;
     border: none;
 
-    @include themify($themes) {
-      color: themed('contact-input-color');
-      border: 1px solid themed('search-border-color');
-      background-color: themed('contact-input-background-color');
-    }
+      color: var(--contact-input-color);
+      border: 1px solid var(--search-border-color);
+      background-color: var(--contact-input-background-color);
 
     &--wrapper {
       margin: 0.25rem;
@@ -47,11 +45,9 @@
     border-radius: 0.125rem;
     border: none;
 
-    @include themify($themes) {
-      color: themed('contact-input-color');
-      border: 1px solid themed('search-border-color');
-      background-color: themed('contact-input-background-color');
-    }
+      color: var(--contact-input-color);
+      border: 1px solid var(--search-border-color);
+      background-color: var(--contact-input-background-color);
 
     &--wrapper {
       margin: 0.25rem;
@@ -94,10 +90,8 @@
     border: none;
     border-radius: 0.125rem;
 
-    @include themify($themes) {
       color: inherit;
-      border: 1px solid themed('search-border-color');
-      background-color: themed('contact-button-background-color');
-    }
+      border: 1px solid var(--search-border-color);
+      background-color: var(--contact-button-background-color);
   }
 }

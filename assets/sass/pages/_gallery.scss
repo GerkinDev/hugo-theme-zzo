@@ -89,10 +89,8 @@
       @include on-event {
         @include box-shadow(0, 4px, 4px, 0, rgba(0, 0, 0, 0.4));
         @include transition(all, 0.25s, ease);
-        @include themify($themes) {
-          color: themed('gallery-mask-color');
-          background-color: themed('gallery-mask-background-color');
-        }
+          color: var(--gallery-mask-color);
+          background-color: var(--gallery-mask-background-color);
       }
 
       &--text {
@@ -105,9 +103,7 @@
         @include flex-direction(column);
         @include align-items(center);
         @include translate(-50%, -50%);
-        @include themify($themes) {
-          color: themed('link');
-        }
+          color: var(--link);
 
         &::after {
           content: "➖🔍➖";

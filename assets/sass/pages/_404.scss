@@ -7,13 +7,11 @@
   @include justify-content(center);
   @include flex-direction(column);
 
-  @include themify($themes) {
     .title {
-      color: themed('title-color');
+      color: var(--title-color);
     }
 
     .subtitle {
-      color: themed('meta-color');
+      color: var(--meta-color);
     }
-  }
 }

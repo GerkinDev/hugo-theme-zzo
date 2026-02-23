@@ -12,18 +12,14 @@
   &__title {
     font-size: 32px;
     
-    @include themify($themes) {
-      color: themed('related-header-title-color');
-    }
+      color: var(--related-header-title-color);
   }
 
   &__link {
     font-size: 16.8px;
     font-family: $title-font;
     
-    @include themify($themes) {
-      color: themed('related-link-color');
-    }
+      color: var(--related-link-color);
   }
 
   &-ul {
