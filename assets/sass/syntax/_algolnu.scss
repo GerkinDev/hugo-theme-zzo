@@ -3,9 +3,12 @@
   /* Error */ .chroma .err {  }
   /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
   /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
-  /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
-  /* LineNumbersTable */ .chroma .lnt { padding: 0 0.4em 0 0.4em;color: #7f7f7f }
-  /* LineNumbers */ .chroma .ln { padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+  /* LineHighlight */ .chroma .hl { display: block; width: 100%;}
+--c-hl-bg: #ffffcc;
+  /* LineNumbersTable */ .chroma .lnt { padding: 0 0.4em 0 0.4em;}
+--c-lnt: #7f7f7f;
+  /* LineNumbers */ .chroma .ln { padding: 0 0.4em 0 0.4em;}
+--c-ln: #7f7f7f;
   /* Keyword */ .chroma .k { font-weight: bold }
   /* KeywordConstant */ .chroma .kc { font-weight: bold }
   /* KeywordDeclaration */ .chroma .kd { font-weight: bold; font-style: italic }
@@ -15,31 +18,57 @@
   /* KeywordType */ .chroma .kt { font-weight: bold }
   /* NameBuiltin */ .chroma .nb { font-weight: bold; font-style: italic }
   /* NameBuiltinPseudo */ .chroma .bp { font-weight: bold; font-style: italic }
-  /* NameClass */ .chroma .nc { color: #666666; font-weight: bold; font-style: italic }
-  /* NameConstant */ .chroma .no { color: #666666; font-weight: bold; font-style: italic }
-  /* NameFunction */ .chroma .nf { color: #666666; font-weight: bold; font-style: italic }
-  /* NameNamespace */ .chroma .nn { color: #666666; font-weight: bold; font-style: italic }
-  /* NameVariable */ .chroma .nv { color: #666666; font-weight: bold; font-style: italic }
-  /* LiteralString */ .chroma .s { color: #666666; font-style: italic }
-  /* LiteralStringAffix */ .chroma .sa { color: #666666; font-style: italic }
-  /* LiteralStringBacktick */ .chroma .sb { color: #666666; font-style: italic }
-  /* LiteralStringChar */ .chroma .sc { color: #666666; font-style: italic }
-  /* LiteralStringDelimiter */ .chroma .dl { color: #666666; font-style: italic }
-  /* LiteralStringDoc */ .chroma .sd { color: #666666; font-style: italic }
-  /* LiteralStringDouble */ .chroma .s2 { color: #666666; font-style: italic }
-  /* LiteralStringEscape */ .chroma .se { color: #666666; font-style: italic }
-  /* LiteralStringHeredoc */ .chroma .sh { color: #666666; font-style: italic }
-  /* LiteralStringInterpol */ .chroma .si { color: #666666; font-style: italic }
-  /* LiteralStringOther */ .chroma .sx { color: #666666; font-style: italic }
-  /* LiteralStringRegex */ .chroma .sr { color: #666666; font-style: italic }
-  /* LiteralStringSingle */ .chroma .s1 { color: #666666; font-style: italic }
-  /* LiteralStringSymbol */ .chroma .ss { color: #666666; font-style: italic }
+  /* NameClass */ .chroma .nc {  font-weight: bold; font-style: italic }
+--c-nc: #666666;
+  /* NameConstant */ .chroma .no {  font-weight: bold; font-style: italic }
+--c-no: #666666;
+  /* NameFunction */ .chroma .nf {  font-weight: bold; font-style: italic }
+--c-nf: #666666;
+  /* NameNamespace */ .chroma .nn {  font-weight: bold; font-style: italic }
+--c-nn: #666666;
+  /* NameVariable */ .chroma .nv {  font-weight: bold; font-style: italic }
+--c-nv: #666666;
+  /* LiteralString */ .chroma .s {  font-style: italic }
+--c-s: #666666;
+  /* LiteralStringAffix */ .chroma .sa {  font-style: italic }
+--c-sa: #666666;
+  /* LiteralStringBacktick */ .chroma .sb {  font-style: italic }
+--c-sb: #666666;
+  /* LiteralStringChar */ .chroma .sc {  font-style: italic }
+--c-sc: #666666;
+  /* LiteralStringDelimiter */ .chroma .dl {  font-style: italic }
+--c-dl: #666666;
+  /* LiteralStringDoc */ .chroma .sd {  font-style: italic }
+--c-sd: #666666;
+  /* LiteralStringDouble */ .chroma .s2 {  font-style: italic }
+--c-s2: #666666;
+  /* LiteralStringEscape */ .chroma .se {  font-style: italic }
+--c-se: #666666;
+  /* LiteralStringHeredoc */ .chroma .sh {  font-style: italic }
+--c-sh: #666666;
+  /* LiteralStringInterpol */ .chroma .si {  font-style: italic }
+--c-si: #666666;
+  /* LiteralStringOther */ .chroma .sx {  font-style: italic }
+--c-sx: #666666;
+  /* LiteralStringRegex */ .chroma .sr {  font-style: italic }
+--c-sr: #666666;
+  /* LiteralStringSingle */ .chroma .s1 {  font-style: italic }
+--c-s1: #666666;
+  /* LiteralStringSymbol */ .chroma .ss {  font-style: italic }
+--c-ss: #666666;
   /* OperatorWord */ .chroma .ow { font-weight: bold }
-  /* Comment */ .chroma .c { color: #888888; font-style: italic }
-  /* CommentHashbang */ .chroma .ch { color: #888888; font-style: italic }
-  /* CommentMultiline */ .chroma .cm { color: #888888; font-style: italic }
-  /* CommentSingle */ .chroma .c1 { color: #888888; font-style: italic }
-  /* CommentSpecial */ .chroma .cs { color: #888888; font-weight: bold }
-  /* CommentPreproc */ .chroma .cp { color: #888888; font-weight: bold }
-  /* CommentPreprocFile */ .chroma .cpf { color: #888888; font-weight: bold }
+  /* Comment */ .chroma .c {  font-style: italic }
+--c-c: #888888;
+  /* CommentHashbang */ .chroma .ch {  font-style: italic }
+--c-ch: #888888;
+  /* CommentMultiline */ .chroma .cm {  font-style: italic }
+--c-cm: #888888;
+  /* CommentSingle */ .chroma .c1 {  font-style: italic }
+--c-c1: #888888;
+  /* CommentSpecial */ .chroma .cs {  font-weight: bold }
+--c-cs: #888888;
+  /* CommentPreproc */ .chroma .cp {  font-weight: bold }
+--c-cp: #888888;
+  /* CommentPreprocFile */ .chroma .cpf {  font-weight: bold }
+--c-cpf: #888888;
 }
